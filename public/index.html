@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dva Demo</title>
+  <link rel="stylesheet" href="index.css" />
+  <link rel="stylesheet" href="http://localhost:5000/static/markdown.css">
+  <style>
+    html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, 
+  strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, 
+  tfoot, thead, tr, th, td ,textarea { margin:0; padding:0;  }
+  address,cite,dfn,em,var, i {font-style:normal;}
+  body {font-size: 16px; line-height: 1.5; font-family:'Microsoft Yahei','simsun','arial','tahoma';  color: #222; }
+  table { border-collapse:collapse; border-spacing:0; }
+  h1, h2, h3, h4, h5, h6, th { font-size: 100%; font-weight: normal; }
+  button,input,select,textarea{font-size:100%;}
+  fieldset,img{border:0;}
+  a { text-decoration: none; color: #666; background: none }
+  ul, ol { list-style: none; }
+  :focus{ outline:none;}
+  </style>
+</head>
+<body>
+
+<div id="root"></div>
+
+<script src="//localhost:5000/static/markdown.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/markdown-it/8.4.0/markdown-it.min.js"></script>
+<script>
+  window.md = markdownit();
+</script>
+<script src="index.js"></script>
+</body>
+</html>
