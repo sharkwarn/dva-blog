@@ -13,13 +13,14 @@ export async function getAllImage() {
   return request('//localhost:5000/upload/getfile');
 }
 
-export async function saveArticle({ content, title }) {
+export async function saveArticle({ content, title, titleImg }) {
   return request('//localhost:5000/article/savearticle', {
     method: 'POST',
     body: JSON.stringify({
       content,
       name: title,
       creator: 'admin',
+      titleImg,
     }),
     headers: {
       'Content-Type': 'application/json',

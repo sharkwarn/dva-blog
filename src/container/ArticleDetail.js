@@ -19,6 +19,7 @@ class ArticleDetail extends React.Component {
 
   render() {
     const { loading, name, content } = this.props;
+    console.log(content)
     return (
       <div className="markdown-body entry-content">
         <h1>{name}</h1>

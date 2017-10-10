@@ -7,6 +7,7 @@ import Upload from './routes/Uoload';
 import EditArticle from './routes/EditArticle';
 import ArticleList from './routes//ArticleList';
 import ArticleDetail from './routes/ArticleDetail';
+import Banner from './routes/Banner';
 
 function RouterConfig({ history }) {
   return (
@@ -18,6 +19,7 @@ function RouterConfig({ history }) {
       <Route path="/editArticle" component={EditArticle} />
       <Route path="/articleList" component={ArticleList} />
       <Route path="/articleDetail" component={ArticleDetail} />
+      <Route path="/EditBanner" component={Banner} />
     </Router>
   );
 }

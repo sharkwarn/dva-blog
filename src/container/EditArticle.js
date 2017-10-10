@@ -1,10 +1,8 @@
 import React from 'react';
 import { Input, Button } from 'antd';
 import { connect } from 'dva';
-import classy from 'markdown-it-classy';
 import styles from './style.less';
 
-window.md.use(classy);
 
 const TextArea = Input.TextArea;
 
@@ -30,12 +28,13 @@ class EditArticle extends React.Component {
   }
 
   submitClick=() => {
-    const { title, data } = this.props;
+    const { title, data, titleImg } = this.props;
     this.props.dispatch({
       type: 'saveArticle/saveContent',
       payload: {
         title,
         content: data,
+        titleImg,
       },
     });
   }
@@ -45,6 +44,15 @@ class EditArticle extends React.Component {
       type: 'saveArticle/save',
       payload: {
         title: e.target.value,
+      },
+    });
+  }
+
+  titleImgOnChange = (e) => {
+    this.props.dispatch({
+      type: 'saveArticle/save',
+      payload: {
+        titleImg: e.target.value,
       },
     });
   }
@@ -65,7 +73,7 @@ class EditArticle extends React.Component {
   }
 
   render() {
-    const { dataSource, data, title } = this.props;
+    const { dataSource, data, title, titleImg } = this.props;
     return (
       <div className={styles.edit_article_container} >
         <div className={styles.edit_article_left}>
@@ -73,6 +81,12 @@ class EditArticle extends React.Component {
             value={title}
             className={styles.edit_title}
             onChange={this.titleOnChange}
+          />
+
+          <Input
+            value={titleImg}
+            className={styles.edit_title}
+            onChange={this.titleImgOnChange}
           />
           <TextArea
             value={dataSource}
@@ -82,6 +96,9 @@ class EditArticle extends React.Component {
         </div>
         <div className="markdown-body entry-content">
           <h1>{title}</h1>
+          <div >
+            <img title="主题图片" alt="主题图片" width="100%" src={titleImg} />
+          </div>
           <article
             dangerouslySetInnerHTML={{ __html: data }}
           >

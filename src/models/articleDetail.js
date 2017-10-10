@@ -1,5 +1,6 @@
 import { getArticleDetail } from './../services/index';
 
+
 export default {
 
   namespace: 'articleDetail',
@@ -41,7 +42,7 @@ export default {
             type: 'save',
             payload: {
               ...res.data,
-              content: res.data.content.replace(/&gt;/gi, '>').replace(/&lt;/gi, '<').replace(/&quot;/gi, '"').replace(/&nbsp;/gi, ' ')
+              content: window.md.render(res.data.content).replace(/&gt;/gi, '>').replace(/&lt;/gi, '<').replace(/&quot;/gi, '"').replace(/&nbsp;/gi, ' ')
               .replace(/&amp;/gi, '&'),
             },
           });

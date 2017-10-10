@@ -1,6 +1,8 @@
 import dva from 'dva';
 import './index.css';
+import classy from 'markdown-it-classy';
 
+window.md.use(classy);
 // 1. Initialize
 const app = dva();
 
