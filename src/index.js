@@ -15,7 +15,7 @@ app.model(require('./models/upload'));
 app.model(require('./models/saveArticle'));
 app.model(require('./models/articleList'));
 app.model(require('./models/articleDetail'));
-
+app.model(require('./models/banner'));
 // 4. Router
 app.router(require('./router'));
 

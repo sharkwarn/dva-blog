@@ -1,7 +1,7 @@
 {
   "private": true,
   "scripts": {
-    "start": "roadhog server",
+    "start": "set PORT=3000&&roadhog server",
     "build": "roadhog build",
     "lint": "eslint --ext .js src test",
     "precommit": "npm run lint"
@@ -14,6 +14,8 @@
     "babel-runtime": "^6.9.2",
     "dva": "^1.2.1",
     "markdown-it-classy": "^0.2.0",
+    "rc-banner-anim": "^0.5.16",
+    "rc-tween-one": "^1.5.1",
     "react": "^15.4.0",
     "react-dom": "^15.4.0"
   },

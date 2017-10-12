@@ -35,3 +35,7 @@ export async function getArticleList() {
 export async function getArticleDetail(id) {
   return request(`//localhost:5000/article/findarticle?id=${id}`);
 }
+
+export async function getBanner() {
+  return request('//localhost:5000/banner/getBanner');
+}

@@ -1,19 +1,23 @@
 import React from 'react';
 import { connect } from 'dva';
 
+import AricleListItem from './AricleListItem';
 import styles from './style.less';
 
 class ArticleList extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      
+    };
+    this.animation = { left: '20%', yoyo: true, repeat: -1, duration: 1000 };
   }
 
   renderList = (data) => {
     return data.map((item, index) => {
       return (
         <li key={index}>
-          <a href={`#/articleDetail?id=${item['_id']}`}>{item.name}</a>
+          <AricleListItem item={item} num={index} />
         </li>
       );
     });
