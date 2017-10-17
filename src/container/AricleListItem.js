@@ -29,7 +29,7 @@ class AricleListItem extends React.Component {
         position = { x: -10, type: 'from' };
     }
     return (
-      <TweenOne style={{ height: '200px' }} animation={{ ...position, duration: 1000, repeat: -1, yoyo: true }}>
+      <TweenOne style={{ height: '300px' }} animation={{ ...position, duration: 1000, repeat: -1, yoyo: true }}>
         <a href={`#/articleDetail?id=${item['_id']}`}>
           { num % 2 === 0 ? (
             <div

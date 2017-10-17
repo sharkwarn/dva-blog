@@ -7,7 +7,7 @@ import styles from './style.less';
 const num = 0.8;
 
 class Banner extends React.Component {
-  constructor(props){
+  constructor(props) {
     super(props);
     this.state = {
       width: document.body.offsetWidth,
@@ -16,7 +16,7 @@ class Banner extends React.Component {
 
   componentDidMount() {
     const $this = this;
-    window.addEventListener('resize',() => {
+    window.addEventListener('resize', () => {
       $this.setState({
         width: document.body.offsetWidth,
       });
@@ -27,31 +27,29 @@ class Banner extends React.Component {
     const { width } = this.state;
     return data.map((item) => {
       return (
-        <Element key={item['_id']} style={{ width: `${width * num}px` }}>
+        <Element key={item['_id']}>
           <TweenOne animation={{ x: -30, type: 'from' }}>
             <a href={`#/articleDetail?id=${item['_id']}`}>
               <div
                 className={styles.banner_item}
-                style={{ width: `${width * num}px`, background: `url(${item.titleImg})`, backgroundSize: 'cover' }}
+                style={{ background: `url(${item.titleImg})`, backgroundSize: 'cover' }}
               >
                 {item.name}
               </div>
             </a>
           </TweenOne>
         </Element>
-      )
+      );
     });
   }
   render() {
-    const { width } = this.state;
     return (
-      <div className={styles.banner_container} style={{ width: `${width * num}px` }}>
+      <div className={styles.banner_container}>
         <BannerAnim
           className={styles.animation_banner}
           autoPlay
-          autoPlaySpeed={1000}
-          type={['grid', 'gridBar']}
-          style={{ width: `${width * num}px` }}
+          autoPlaySpeed={3000}
+          type={['grid']}
         >
           {this.renderBody(this.props.list)}
         </BannerAnim>

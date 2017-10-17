@@ -1,19 +1,36 @@
 
 .banner_container {
   width: 100%;
-  height: 300px;
+  height: 500px;
   overflow: hidden;
   margin: 0 auto;
+  position: relative;
   .animation_banner{
     width: 100%;
-    height: 300px;
+    height: 500px;
     overflow: hidden;
     .banner_item{
       width: 100%;
-      height: 300px;
+      height: 500px;
       text-align: center;
       font-size: 30px;
     }
+  }
+}
+
+.article_contaienr{
+  width: 1140px;
+  height: auto;
+  overflow: hidden;
+  margin: 0 auto;
+  padding-top: 80px;
+  .article_Breadcrumb{
+   span{
+    font-size: 16px;
+   }
+  }
+  h1{
+    border-bottom: 1px solid #666;
   }
 }
 
@@ -30,13 +47,17 @@
     line-height: 60px;
     font-size: 24px;
     text-indent: 20px;
+    margin-bottom: 20px;
   }
   .articleList_list {
     display: flex;
     flex-wrap:wrap;
+    .banenr_item{
+      width: 50%;
+    }
     li{
       width: 25%;
-      height: 400px;
+      height: 500px;
       padding: 2px 8px;
       box-sizing: border-box;
       line-height: 30px;

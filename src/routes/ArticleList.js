@@ -6,8 +6,6 @@ import ArticleListCon from './../container/ArticleList';
 function ArticleList() {
   return (
     <div>
-      <h1>导航是我</h1>
-      <Banner />
       <ArticleListCon />
     </div>
   );

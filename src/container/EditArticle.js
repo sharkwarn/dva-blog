@@ -2,6 +2,7 @@ import React from 'react';
 import { Input, Button } from 'antd';
 import { connect } from 'dva';
 import styles from './style.less';
+import './markDown.less';
 
 
 const TextArea = Input.TextArea;
